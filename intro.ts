@@ -1,4 +1,4 @@
-let user = {
+let users = {
     name: "Wiktor",
     age: 25,
 }
