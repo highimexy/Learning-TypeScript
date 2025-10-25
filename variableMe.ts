@@ -1,10 +1,14 @@
 //VARIABLES
+//STRING
 let geertings: string = "Wiktor";
 
-let mynum = 6;
-
 geertings.toLowerCase();
-
 console.log(geertings);
 
-export {}
+//NUMBER
+let userId: number = 334455.3;
+
+//BOOLEAN
+let isLoggedIn = false;
+
+export {};
