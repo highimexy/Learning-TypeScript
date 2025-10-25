@@ -1,3 +1,4 @@
+//VARIABLES
 let geertings: string = "Wiktor";
 
 let mynum = 6;
