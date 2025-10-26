@@ -1,4 +1,4 @@
-const menu = [
+/*const menu = [
   { name: "Margharita", price: 8 },
   { name: "Pepperoni", price: 10 },
   { name: "Hawaiian", price: 10 },
