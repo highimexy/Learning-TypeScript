@@ -1,12 +1,12 @@
-/*const menu = [
+const menu = [
   { name: "Margharita", price: 8 },
   { name: "Pepperoni", price: 10 },
   { name: "Hawaiian", price: 10 },
   { name: "Veggie", price: 9 },
 ];
 
-const cashInRegister = 100;
-const nextOrderId = 1;
+let cashInRegister = 100;
+let nextOrderId = 1;
 const orderQueue = [];
 
 function addNewPizza(pizzaObj) {
