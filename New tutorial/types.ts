@@ -9,35 +9,59 @@ type Food = string;
 let favoriteFood: Food = "pizza";
 
 //CUSTOM TYPES OBJECT
+type Address = {
+  street: string;
+  city: string;
+  country: string;
+};
+
 type Person = {
   name: string;
   age: number;
   isStudent: boolean;
-  address: {
-    street: string;
-    city: string;
-    country: string;
-  };
+  address?: Address;
+  //? = optional
 };
 
 let person: Person = {
   name: "Joe",
   age: 42,
   isStudent: true,
-  address: {
-    street: "424",
-    city: "city",
-    country: "country",
-  },
 };
 
 let person2: Person = {
   name: "Darwin",
   age: 60,
   isStudent: false,
-  address: {w
+  address: {
     street: "242",
     city: "city2",
     country: "country2",
   },
 };
+
+//arrays
+let ages: number[] = [100, 101, "one"];
+ages.push(true);
+
+type PersonArray = {
+  name: string;
+  age: number;
+  isStudent: boolean;
+};
+
+let person2137: PersonArray = {
+  name: "Joe",
+  age: 42,
+  isStudent: true,
+};
+
+let person69: PersonArray = {
+  name: "Jill",
+  age: 30,
+  isStudent: false,
+};
+
+let people: PersonArray[] = [person2137, person69];
+
+// Array<PersonArray>
