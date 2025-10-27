@@ -65,3 +65,13 @@ let person69: PersonArray = {
 let people: PersonArray[] = [person2137, person69];
 
 // Array<PersonArray>
+
+//literal types
+let myName3: "Bob" = "Bob"
+
+const myName2: "Bob" = "Bob"
+
+//Unions
+type UserRole = "guest" | "member" | "admin"
+
+let userRole: UserRole = "admin"
