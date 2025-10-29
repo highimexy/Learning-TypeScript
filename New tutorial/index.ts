@@ -51,15 +51,17 @@ function completeOrder(orderId: number) {
   return order;
 }
 
-export function GetPizzaDetail(identifier: number | string) {
+export function GetPizzaDetail(identifier: number | string): Pizza | undefined {
   if (typeof identifier === "string") {
     return menu.find(
       (pizza) => pizza.name.toLocaleLowerCase() === identifier.toLowerCase()
     );
-  } else if (typeof identifier ==="number") {
+  } else if (typeof identifier === "number") {
     return menu.find((pizza) => pizza.id === identifier);
-  } else{
-    throw new TypeError("Parameter `identifier` must be either a string or number")
+  } else {
+    throw new TypeError(
+      "Parameter `identifier` must be either a string or number"
+    );
   }
 }
 
