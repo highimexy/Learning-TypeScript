@@ -67,11 +67,19 @@ let people: PersonArray[] = [person2137, person69];
 // Array<PersonArray>
 
 //literal types
-let myName3: "Bob" = "Bob"
+let myName3: "Bob" = "Bob";
 
-const myName2: "Bob" = "Bob"
+const myName2: "Bob" = "Bob";
 
 //Unions
-type UserRole = "guest" | "member" | "admin"
+type UserRole1 = "guest" | "member" | "admin";
 
-let userRole: UserRole = "admin"
+let userRole: UserRole = "admin";
+
+//any
+
+let value: any = 1;
+value.toUpperCase();
+
+value = "Hi"
+value.map();
