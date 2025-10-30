@@ -4,26 +4,27 @@ type User1 = {
   role: "guest" | "member" | "admin";
 };
 
-type UpdatedUser = Partial<User1>
+let nextUserId = 1;
+type UpdatedUser = Partial<User1>;
 
 const users1: User1[] = [
   {
-    id: 1,
+    id: nextUserId++,
     username: "John_doe",
     role: "admin",
   },
   {
-    id: 3,
+    id: nextUserId++,
     username: "Jane_Malik",
     role: "member",
   },
   {
-    id: 2,
+    id: nextUserId++,
     username: "guest_user",
     role: "guest",
   },
   {
-    id: 4,
+    id: nextUserId++,
     username: "guest_user",
     role: "guest",
   },
@@ -38,5 +39,17 @@ function updateUser(id: number, updates: UpdatedUser) {
     throw new Error(`Użytkownik o ID ${id} nie został znaleziony`);
   }
 }
+
+function addNewUser(newUser: Omit<User1, "id">): User1 {
+  const user = {
+    id: nextUserId++,
+    ...newUser,
+  };
+
+  users1.push(user);
+  return newUser;
+}
+
+addNewUser({ username: "joe_cos", role: "member" });
 
 updateUser(1, { username: "new_user_name" });
